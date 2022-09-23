@@ -4,6 +4,6 @@ CHOICE=$(echo -e "es\nus\ndvorak" | dmenu -p layout)
 
 case "$CHOICE" in
 	es) setxkbmap es -option caps:escape & ;;
-	us) setxkbmap us -option caps:escape & ;;
+	us) setxkbmap -layout us -variant intl -option caps:swapescape & ;;
 	dvorak) setxkbmap es -option caps:escape & ;;
 esac
