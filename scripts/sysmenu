@@ -5,5 +5,5 @@ CHOICE=$(echo -e "lock\nshutdown\nreboot" | dmenu -p "system menu")
 case "$CHOICE" in
 	shutdown) systemctl poweroff ;;
 	reboot) systemctl reboot ;;
-	lock) dm-tool lock ;;
+	lock) i3lock ;;
 esac

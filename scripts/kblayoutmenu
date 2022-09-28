@@ -1,9 +1,10 @@
-#!bin/bash
+#!/bin/bash
 
-CHOICE=$(echo -e "es\nus\ndvorak" | dmenu -p layout)
+CHOICE=$(echo -e "es\nus\nus-int\ndvorak" | dmenu -p layout)
 
 case "$CHOICE" in
-	es) setxkbmap es -option caps:escape & ;;
-	us) setxkbmap -layout us -variant intl -option caps:swapescape & ;;
+	es) setxkbmap es -option caps:swapescape & ;;
+	us) setxkbmap us -option caps:swapescape & ;;
+	us-int) setxkbmap -layout us -variant intl -option caps:swapescape & ;;
 	dvorak) setxkbmap es -option caps:escape & ;;
 esac
